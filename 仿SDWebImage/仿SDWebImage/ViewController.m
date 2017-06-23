@@ -8,8 +8,17 @@
 
 #import "ViewController.h"
 #import "DownOperation.h"
+#import "AppModel.h"
+#import "AFNetworking.h"
+#import "YYModel.h"
 
 @interface ViewController ()
+
+@property(nonatomic,strong) NSArray *appList;
+
+@property(nonatomic,strong) NSOperationQueue *queue;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;
 
 @end
 
@@ -17,19 +26,43 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.queue = [NSOperationQueue new];
 
-    NSOperationQueue *queue = [NSOperationQueue new];
+    [self loadData];
 
-    DownOperation *op = [DownOperation new];
 
-    op.URLString = @"http://paper.taizhou.com.cn/tzwb/res/1/2/2015-01/20/12/res03_attpic_brief.jpg";
+}
 
-    [op setFinishedBlock:^(UIImage *image){
-        NSLog(@"%@  %@",image,[NSThread currentThread]);
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    int random = arc4random_uniform((int32_t)self.appList.count);
+
+    AppModel *model = self.appList[random];
+
+    DownOperation *op = [DownOperation downOperationWithURLString:model.icon finishes:^(UIImage *image) {
+        self.imgView.image = image;
     }];
 
-    [queue addOperation:op];
+    [self.queue addOperation:op];
+}
 
+- (void)loadData
+{
+    NSString *URLString = @"https://raw.githubusercontent.com/Wickyong/DataFiles/master/apps.json";
+
+    [[AFHTTPSessionManager manager] GET:URLString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+
+        NSArray *dictArr = responseObject;
+
+        self.appList = [NSArray yy_modelArrayWithClass:[AppModel class] json:dictArr];
+
+        NSLog(@"%@",self.appList );
+
+
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 

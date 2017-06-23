@@ -39,6 +39,8 @@
 
     UIImage *image = [UIImage imageWithData:data];
 
+    [NSThread sleepForTimeInterval:1.0];
+
     if (self.finishedBlock != nil) {
         [[NSOperationQueue mainQueue]addOperationWithBlock:^{
             self.finishedBlock(image);
