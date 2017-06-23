@@ -11,7 +11,9 @@
 
 @interface DownOperation : NSOperation
 
-@property (nonatomic, copy) NSString* URLString;
+//@property (nonatomic, copy) NSString* URLString;
+//
+//@property (nonatomic, copy) void(^finishedBlock)(UIImage *image);
 
-@property (nonatomic, copy) void(^finishedBlock)(UIImage *image);
++(instancetype)downOperationWithURLString:(NSString *)URLString finishes:(void(^)(UIImage *image)) finishedBlock;
 @end

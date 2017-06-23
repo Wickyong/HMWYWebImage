@@ -8,8 +8,27 @@
 
 #import "DownOperation.h"
 
+@interface DownOperation ()
+
+@property (nonatomic, copy) NSString* URLString;
+
+@property (nonatomic, copy) void(^finishedBlock)(UIImage *image);
+
+@end
+
 @implementation DownOperation
 
++(instancetype)downOperationWithURLString:(NSString *)URLString finishes:(void (^)(UIImage *))finishedBlock
+{
+    DownOperation *op = [DownOperation new];
+
+    op.URLString = URLString;
+
+    op.finishedBlock = finishedBlock;
+
+    return op;
+
+}
 -(void)main
 {
     NSLog(@"传入的==%@",self.URLString);
