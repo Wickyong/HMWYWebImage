@@ -20,6 +20,10 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
 
+@property(nonatomic,strong)NSMutableDictionary *opCache;
+
+@property(nonatomic,copy)NSString *lastURLString;
+
 @end
 
 @implementation ViewController
@@ -28,6 +32,8 @@
     [super viewDidLoad];
     
     self.queue = [NSOperationQueue new];
+
+    self.opCache = [[NSMutableDictionary alloc]init];
 
     [self loadData];
 
@@ -40,9 +46,24 @@
 
     AppModel *model = self.appList[random];
 
+    if (![model.icon isEqualToString:_lastURLString] && _lastURLString != nil) {
+        DownOperation *lastOp = [self.opCache objectForKey:_lastURLString];
+
+        [lastOp cancel];
+
+        [self.opCache removeObjectForKey:_lastURLString];
+    }
+
+    //记录上次图片地址
+    _lastURLString = model.icon;
+
     DownOperation *op = [DownOperation downOperationWithURLString:model.icon finishes:^(UIImage *image) {
         self.imgView.image = image;
+
+        [self.opCache removeObjectForKey:model.icon];
     }];
+
+    [self.opCache setObject:op forKey:model.icon ];
 
     [self.queue addOperation:op];
 }

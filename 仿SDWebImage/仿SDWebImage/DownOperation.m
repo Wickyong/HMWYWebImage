@@ -31,7 +31,7 @@
 }
 -(void)main
 {
-    NSLog(@"传入的==%@",self.URLString);
+    NSLog(@"传入==%@",self.URLString);
 
     NSURL *url = [NSURL URLWithString:self.URLString];
 
@@ -41,8 +41,17 @@
 
     [NSThread sleepForTimeInterval:1.0];
 
+    //判断操作执行的过程中拦截到的操作是否被取消了
+    if (self.isCancelled == YES) {
+        NSLog(@"取消== %@",self.URLString);
+        return;
+    }
+
     if (self.finishedBlock != nil) {
         [[NSOperationQueue mainQueue]addOperationWithBlock:^{
+
+            NSLog(@"完成== %@",self.URLString);
+
             self.finishedBlock(image);
         }];
     }
