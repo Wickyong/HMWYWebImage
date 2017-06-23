@@ -39,6 +39,7 @@
 		EE75813A1EFD32E700413216 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7581201EFD32E700413216 /* NSObject+YYModel.m */; };
 		EE75813B1EFD32E700413216 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7581221EFD32E700413216 /* YYClassInfo.m */; };
 		EE75813E1EFD331A00413216 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE75813D1EFD331A00413216 /* AppModel.m */; };
+		EE7581411EFD416500413216 /* HMWYWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7581401EFD416500413216 /* HMWYWebImageManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +108,8 @@
 		EE7581231EFD32E700413216 /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
 		EE75813C1EFD331A00413216 /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppModel.h; sourceTree = "<group>"; };
 		EE75813D1EFD331A00413216 /* AppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
+		EE75813F1EFD416500413216 /* HMWYWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMWYWebImageManager.h; sourceTree = "<group>"; };
+		EE7581401EFD416500413216 /* HMWYWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMWYWebImageManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +172,8 @@
 			children = (
 				EE7580EA1EFD2B5A00413216 /* DownOperation.h */,
 				EE7580EB1EFD2B5A00413216 /* DownOperation.m */,
+				EE75813F1EFD416500413216 /* HMWYWebImageManager.h */,
+				EE7581401EFD416500413216 /* HMWYWebImageManager.m */,
 			);
 			name = HMWYWebImage;
 			sourceTree = "<group>";
@@ -356,6 +361,7 @@
 				EE7581331EFD32E700413216 /* UIButton+WebCache.m in Sources */,
 				EE75812B1EFD32E700413216 /* NSData+ImageContentType.m in Sources */,
 				EE7581271EFD32E700413216 /* AFURLRequestSerialization.m in Sources */,
+				EE7581411EFD416500413216 /* HMWYWebImageManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@
 #import "AppModel.h"
 #import "AFNetworking.h"
 #import "YYModel.h"
+#import "HMWYWebImageManager.h"
 
 @interface ViewController ()
 
@@ -36,8 +37,6 @@
     self.opCache = [[NSMutableDictionary alloc]init];
 
     [self loadData];
-
-
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -47,6 +46,8 @@
     AppModel *model = self.appList[random];
 
     if (![model.icon isEqualToString:_lastURLString] && _lastURLString != nil) {
+
+        //取出上一个图片的下载操作,调用cancel方法取消掉
         DownOperation *lastOp = [self.opCache objectForKey:_lastURLString];
 
         [lastOp cancel];
@@ -57,15 +58,20 @@
     //记录上次图片地址
     _lastURLString = model.icon;
 
-    DownOperation *op = [DownOperation downOperationWithURLString:model.icon finishes:^(UIImage *image) {
+//    DownOperation *op = [DownOperation downOperationWithURLString:model.icon finishes:^(UIImage *image) {
+//        self.imgView.image = image;
+//
+//        [self.opCache removeObjectForKey:model.icon];
+//    }];
+//
+//    [self.opCache setObject:op forKey:model.icon ];
+//
+//    [self.queue addOperation:op];
+
+    //单例接管下载操作
+    [[HMWYWebImageManager sharedManager] downOperationWithURLString:model.icon completion:^(UIImage *image) {
         self.imgView.image = image;
-
-        [self.opCache removeObjectForKey:model.icon];
     }];
-
-    [self.opCache setObject:op forKey:model.icon ];
-
-    [self.queue addOperation:op];
 }
 
 - (void)loadData
