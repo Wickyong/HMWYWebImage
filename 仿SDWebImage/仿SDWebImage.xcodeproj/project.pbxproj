@@ -13,6 +13,7 @@
 		EE7580DD1EFD2A3300413216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE7580DB1EFD2A3300413216 /* Main.storyboard */; };
 		EE7580DF1EFD2A3300413216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE7580DE1EFD2A3300413216 /* Assets.xcassets */; };
 		EE7580E21EFD2A3300413216 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE7580E01EFD2A3300413216 /* LaunchScreen.storyboard */; };
+		EE7580EC1EFD2B5A00413216 /* DownOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7580EB1EFD2B5A00413216 /* DownOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		EE7580DE1EFD2A3300413216 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE7580E11EFD2A3300413216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE7580E31EFD2A3300413216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE7580EA1EFD2B5A00413216 /* DownOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownOperation.h; sourceTree = "<group>"; };
+		EE7580EB1EFD2B5A00413216 /* DownOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		EE7580D11EFD2A3300413216 /* 仿SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
+				EE7580E91EFD2B1900413216 /* HMWYWebImage */,
 				EE7580D51EFD2A3300413216 /* AppDelegate.h */,
 				EE7580D61EFD2A3300413216 /* AppDelegate.m */,
 				EE7580D81EFD2A3300413216 /* ViewController.h */,
@@ -77,6 +81,15 @@
 				EE7580D31EFD2A3300413216 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE7580E91EFD2B1900413216 /* HMWYWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				EE7580EA1EFD2B5A00413216 /* DownOperation.h */,
+				EE7580EB1EFD2B5A00413216 /* DownOperation.m */,
+			);
+			name = HMWYWebImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +167,7 @@
 				EE7580DA1EFD2A3300413216 /* ViewController.m in Sources */,
 				EE7580D71EFD2A3300413216 /* AppDelegate.m in Sources */,
 				EE7580D41EFD2A3300413216 /* main.m in Sources */,
+				EE7580EC1EFD2B5A00413216 /* DownOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

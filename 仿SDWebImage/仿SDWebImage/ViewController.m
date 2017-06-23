@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DownOperation.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    NSOperationQueue *queue = [NSOperationQueue new];
+
+    DownOperation *op = [DownOperation new];
+
+    op.URLString = @"http://paper.taizhou.com.cn/tzwb/res/1/2/2015-01/20/12/res03_attpic_brief.jpg";
+
+    [op setFinishedBlock:^(UIImage *image){
+        NSLog(@"%@  %@",image,[NSThread currentThread]);
+    }];
+
+    [queue addOperation:op];
+
 }
 
 
