@@ -15,5 +15,13 @@
 //
 //@property (nonatomic, copy) void(^finishedBlock)(UIImage *image);
 
+
+/**
+ 创建操作和下载图片的主方法
+
+ @param URLString 图片地址
+ @param finishedBlock 下载完成的回调
+ @return 自定义的下载操作
+ */
 +(instancetype)downOperationWithURLString:(NSString *)URLString finishes:(void(^)(UIImage *image)) finishedBlock;
 @end

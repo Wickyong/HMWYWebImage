@@ -40,13 +40,21 @@
     return self;
 }
 
+
+/**
+ 单例下载的主方法
+
+ @param URLString 图片地址
+ @param completionBlock 下载完成的回调
+ */
 - (void)downOperationWithURLString:(NSString *)URLString completion:(void (^)(UIImage *))completionBlock
 {
-    
+    //在建立下载操作前,判断要建立的操作是否存在,如果存在,则不再建立重复的下载操作
     if ([self.opCache objectForKey:URLString] != nil) {
         return;
     }
 
+    //获取随机图片的地址,交由downOperation去下载
     DownOperation *op = [DownOperation downOperationWithURLString:URLString finishes:^(UIImage *image) {
 
         //单例把拿到的image回传给VC
@@ -61,6 +69,18 @@
     [self.opCache setObject:op forKey:URLString ];
 
     [self.queue addOperation:op];
+}
+
+- (void)cancelLastOperation:(NSString *)lastURLString
+{
+    //取出上一个图片的下载操作
+    DownOperation *lastOp = [self.opCache objectForKey:lastURLString];
+
+    //调用cancel方法取消掉
+    [lastOp cancel];
+
+    //取消掉的操作从缓存池中移除
+    [self.opCache removeObjectForKey:lastURLString];
 }
 
 @end
