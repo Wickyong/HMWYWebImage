@@ -41,6 +41,7 @@
 		EE75813E1EFD331A00413216 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE75813D1EFD331A00413216 /* AppModel.m */; };
 		EE7581411EFD416500413216 /* HMWYWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7581401EFD416500413216 /* HMWYWebImageManager.m */; };
 		EE7581441EFFD62B00413216 /* NSString+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7581431EFFD62B00413216 /* NSString+Path.m */; };
+		EE75814A1EFFDFF200413216 /* UIImageView+WebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7581491EFFDFF200413216 /* UIImageView+WebImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +114,8 @@
 		EE7581401EFD416500413216 /* HMWYWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMWYWebImageManager.m; sourceTree = "<group>"; };
 		EE7581421EFFD62B00413216 /* NSString+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Path.h"; sourceTree = "<group>"; };
 		EE7581431EFFD62B00413216 /* NSString+Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Path.m"; sourceTree = "<group>"; };
+		EE7581481EFFDFF200413216 /* UIImageView+WebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebImage.h"; sourceTree = "<group>"; };
+		EE7581491EFFDFF200413216 /* UIImageView+WebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebImage.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +182,8 @@
 				EE7581401EFD416500413216 /* HMWYWebImageManager.m */,
 				EE7581421EFFD62B00413216 /* NSString+Path.h */,
 				EE7581431EFFD62B00413216 /* NSString+Path.m */,
+				EE7581481EFFDFF200413216 /* UIImageView+WebImage.h */,
+				EE7581491EFFDFF200413216 /* UIImageView+WebImage.m */,
 			);
 			name = HMWYWebImage;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 				EE7581341EFD32E700413216 /* UIImage+GIF.m in Sources */,
 				EE7581441EFFD62B00413216 /* NSString+Path.m in Sources */,
 				EE7581291EFD32E700413216 /* AFURLSessionManager.m in Sources */,
+				EE75814A1EFFDFF200413216 /* UIImageView+WebImage.m in Sources */,
 				EE7580D41EFD2A3300413216 /* main.m in Sources */,
 				EE75813B1EFD32E700413216 /* YYClassInfo.m in Sources */,
 				EE7581251EFD32E700413216 /* AFNetworkReachabilityManager.m in Sources */,
