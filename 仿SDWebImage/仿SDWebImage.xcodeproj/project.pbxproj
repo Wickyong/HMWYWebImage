@@ -40,6 +40,7 @@
 		EE75813B1EFD32E700413216 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7581221EFD32E700413216 /* YYClassInfo.m */; };
 		EE75813E1EFD331A00413216 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE75813D1EFD331A00413216 /* AppModel.m */; };
 		EE7581411EFD416500413216 /* HMWYWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7581401EFD416500413216 /* HMWYWebImageManager.m */; };
+		EE7581441EFFD62B00413216 /* NSString+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7581431EFFD62B00413216 /* NSString+Path.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,8 @@
 		EE75813D1EFD331A00413216 /* AppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
 		EE75813F1EFD416500413216 /* HMWYWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMWYWebImageManager.h; sourceTree = "<group>"; };
 		EE7581401EFD416500413216 /* HMWYWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMWYWebImageManager.m; sourceTree = "<group>"; };
+		EE7581421EFFD62B00413216 /* NSString+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Path.h"; sourceTree = "<group>"; };
+		EE7581431EFFD62B00413216 /* NSString+Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Path.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +177,8 @@
 				EE7580EB1EFD2B5A00413216 /* DownOperation.m */,
 				EE75813F1EFD416500413216 /* HMWYWebImageManager.h */,
 				EE7581401EFD416500413216 /* HMWYWebImageManager.m */,
+				EE7581421EFFD62B00413216 /* NSString+Path.h */,
+				EE7581431EFFD62B00413216 /* NSString+Path.m */,
 			);
 			name = HMWYWebImage;
 			sourceTree = "<group>";
@@ -351,6 +356,7 @@
 				EE7581391EFD32E700413216 /* UIView+WebCacheOperation.m in Sources */,
 				EE75812F1EFD32E700413216 /* SDWebImageDownloader.m in Sources */,
 				EE7581341EFD32E700413216 /* UIImage+GIF.m in Sources */,
+				EE7581441EFFD62B00413216 /* NSString+Path.m in Sources */,
 				EE7581291EFD32E700413216 /* AFURLSessionManager.m in Sources */,
 				EE7580D41EFD2A3300413216 /* main.m in Sources */,
 				EE75813B1EFD32E700413216 /* YYClassInfo.m in Sources */,
@@ -520,6 +526,7 @@
 				EE7580E81EFD2A3300413216 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

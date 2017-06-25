@@ -8,11 +8,14 @@
 
 #import "HMWYWebImageManager.h"
 
+
 @interface HMWYWebImageManager ()
 
 @property(nonatomic,strong)NSOperationQueue *queue;
 
 @property(nonatomic,strong) NSMutableDictionary *opCache;
+
+@property(nonatomic,strong)NSMutableDictionary *imgMemCache;
 
 @end
 
@@ -36,6 +39,8 @@
 
         self.opCache = [NSMutableDictionary new];
 
+        self.imgMemCache = [NSMutableDictionary new];
+
     }
     return self;
 }
@@ -49,6 +54,14 @@
  */
 - (void)downOperationWithURLString:(NSString *)URLString completion:(void (^)(UIImage *))completionBlock
 {
+#pragma mark - 下载图片时,判断是否有缓存(即直接包括了内存和沙盒的缓存)
+    if ([self checkCache:URLString]) {
+        if (completionBlock != nil) {
+            completionBlock([self.imgMemCache objectForKey:URLString]);
+            return;
+        }
+    }
+
     //在建立下载操作前,判断要建立的操作是否存在,如果存在,则不再建立重复的下载操作
     if ([self.opCache objectForKey:URLString] != nil) {
         return;
@@ -62,6 +75,12 @@
             completionBlock(image);
         }
 
+        //实现图片的内存缓存
+        if (image != nil)
+        {
+            [self.imgMemCache setObject:image forKey:URLString];
+        }
+
         //图片下载结束后,移除对应的操作
         [self.opCache removeObjectForKey:URLString];
     }];
@@ -69,6 +88,26 @@
     [self.opCache setObject:op forKey:URLString ];
 
     [self.queue addOperation:op];
+}
+
+//判断是否有缓存的方法
+- (BOOL)checkCache:(NSString *)URLString
+{
+    //判断是否有内存缓存
+    if ([self.imgMemCache objectForKey:URLString]) {
+        NSLog(@"从内存中加载...");
+        return YES;
+    }
+
+    //判断是否有沙盒缓存
+    UIImage *cacheImage = [UIImage imageWithContentsOfFile:[URLString appendCachePath]];
+    if (cacheImage != nil) {
+        NSLog(@"从沙盒中加载...");
+        [self.imgMemCache setObject:cacheImage forKey:URLString];
+        return YES;
+    }
+    return NO;
+
 }
 
 - (void)cancelLastOperation:(NSString *)lastURLString
