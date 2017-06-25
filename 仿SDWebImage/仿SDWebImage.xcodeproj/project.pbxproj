@@ -13,7 +13,6 @@
 		EE7580DD1EFD2A3300413216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE7580DB1EFD2A3300413216 /* Main.storyboard */; };
 		EE7580DF1EFD2A3300413216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE7580DE1EFD2A3300413216 /* Assets.xcassets */; };
 		EE7580E21EFD2A3300413216 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE7580E01EFD2A3300413216 /* LaunchScreen.storyboard */; };
-		EE7580EC1EFD2B5A00413216 /* DownOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7580EB1EFD2B5A00413216 /* DownOperation.m */; };
 		EE7581241EFD32E700413216 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7580F01EFD32E700413216 /* AFHTTPSessionManager.m */; };
 		EE7581251EFD32E700413216 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7580F31EFD32E700413216 /* AFNetworkReachabilityManager.m */; };
 		EE7581261EFD32E700413216 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7580F51EFD32E700413216 /* AFSecurityPolicy.m */; };
@@ -39,9 +38,10 @@
 		EE75813A1EFD32E700413216 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7581201EFD32E700413216 /* NSObject+YYModel.m */; };
 		EE75813B1EFD32E700413216 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7581221EFD32E700413216 /* YYClassInfo.m */; };
 		EE75813E1EFD331A00413216 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE75813D1EFD331A00413216 /* AppModel.m */; };
-		EE7581411EFD416500413216 /* HMWYWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7581401EFD416500413216 /* HMWYWebImageManager.m */; };
-		EE7581441EFFD62B00413216 /* NSString+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7581431EFFD62B00413216 /* NSString+Path.m */; };
-		EE75814A1EFFDFF200413216 /* UIImageView+WebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7581491EFFDFF200413216 /* UIImageView+WebImage.m */; };
+		EE7581541EFFE41900413216 /* DownOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EE75814D1EFFE41900413216 /* DownOperation.m */; };
+		EE7581551EFFE41900413216 /* HMWYWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE75814F1EFFE41900413216 /* HMWYWebImageManager.m */; };
+		EE7581561EFFE41900413216 /* NSString+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7581511EFFE41900413216 /* NSString+Path.m */; };
+		EE7581571EFFE41900413216 /* UIImageView+WebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7581531EFFE41900413216 /* UIImageView+WebImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,8 +55,6 @@
 		EE7580DE1EFD2A3300413216 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE7580E11EFD2A3300413216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE7580E31EFD2A3300413216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE7580EA1EFD2B5A00413216 /* DownOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownOperation.h; sourceTree = "<group>"; };
-		EE7580EB1EFD2B5A00413216 /* DownOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownOperation.m; sourceTree = "<group>"; };
 		EE7580EF1EFD32E700413216 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		EE7580F01EFD32E700413216 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		EE7580F11EFD32E700413216 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -110,12 +108,14 @@
 		EE7581231EFD32E700413216 /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
 		EE75813C1EFD331A00413216 /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppModel.h; sourceTree = "<group>"; };
 		EE75813D1EFD331A00413216 /* AppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
-		EE75813F1EFD416500413216 /* HMWYWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMWYWebImageManager.h; sourceTree = "<group>"; };
-		EE7581401EFD416500413216 /* HMWYWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMWYWebImageManager.m; sourceTree = "<group>"; };
-		EE7581421EFFD62B00413216 /* NSString+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Path.h"; sourceTree = "<group>"; };
-		EE7581431EFFD62B00413216 /* NSString+Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Path.m"; sourceTree = "<group>"; };
-		EE7581481EFFDFF200413216 /* UIImageView+WebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebImage.h"; sourceTree = "<group>"; };
-		EE7581491EFFDFF200413216 /* UIImageView+WebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebImage.m"; sourceTree = "<group>"; };
+		EE75814C1EFFE41900413216 /* DownOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownOperation.h; sourceTree = "<group>"; };
+		EE75814D1EFFE41900413216 /* DownOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownOperation.m; sourceTree = "<group>"; };
+		EE75814E1EFFE41900413216 /* HMWYWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMWYWebImageManager.h; sourceTree = "<group>"; };
+		EE75814F1EFFE41900413216 /* HMWYWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMWYWebImageManager.m; sourceTree = "<group>"; };
+		EE7581501EFFE41900413216 /* NSString+Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Path.h"; sourceTree = "<group>"; };
+		EE7581511EFFE41900413216 /* NSString+Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Path.m"; sourceTree = "<group>"; };
+		EE7581521EFFE41900413216 /* UIImageView+WebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebImage.h"; sourceTree = "<group>"; };
+		EE7581531EFFE41900413216 /* UIImageView+WebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebImage.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				EE7580ED1EFD32E700413216 /* 第三方框架 */,
-				EE7580E91EFD2B1900413216 /* HMWYWebImage */,
 				EE7580D51EFD2A3300413216 /* AppDelegate.h */,
 				EE7580D61EFD2A3300413216 /* AppDelegate.m */,
 				EE7580D81EFD2A3300413216 /* ViewController.h */,
@@ -173,24 +172,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EE7580E91EFD2B1900413216 /* HMWYWebImage */ = {
-			isa = PBXGroup;
-			children = (
-				EE7580EA1EFD2B5A00413216 /* DownOperation.h */,
-				EE7580EB1EFD2B5A00413216 /* DownOperation.m */,
-				EE75813F1EFD416500413216 /* HMWYWebImageManager.h */,
-				EE7581401EFD416500413216 /* HMWYWebImageManager.m */,
-				EE7581421EFFD62B00413216 /* NSString+Path.h */,
-				EE7581431EFFD62B00413216 /* NSString+Path.m */,
-				EE7581481EFFDFF200413216 /* UIImageView+WebImage.h */,
-				EE7581491EFFDFF200413216 /* UIImageView+WebImage.m */,
-			);
-			name = HMWYWebImage;
-			sourceTree = "<group>";
-		};
 		EE7580ED1EFD32E700413216 /* 第三方框架 */ = {
 			isa = PBXGroup;
 			children = (
+				EE75814B1EFFE41900413216 /* HMWYWebImage */,
 				EE7580EE1EFD32E700413216 /* AFNetworking */,
 				EE7580FC1EFD32E700413216 /* SDWebImage */,
 				EE75811E1EFD32E700413216 /* YYModel */,
@@ -270,6 +255,21 @@
 			path = YYModel;
 			sourceTree = "<group>";
 		};
+		EE75814B1EFFE41900413216 /* HMWYWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				EE75814C1EFFE41900413216 /* DownOperation.h */,
+				EE75814D1EFFE41900413216 /* DownOperation.m */,
+				EE75814E1EFFE41900413216 /* HMWYWebImageManager.h */,
+				EE75814F1EFFE41900413216 /* HMWYWebImageManager.m */,
+				EE7581501EFFE41900413216 /* NSString+Path.h */,
+				EE7581511EFFE41900413216 /* NSString+Path.m */,
+				EE7581521EFFE41900413216 /* UIImageView+WebImage.h */,
+				EE7581531EFFE41900413216 /* UIImageView+WebImage.m */,
+			);
+			path = HMWYWebImage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -346,6 +346,7 @@
 				EE7581261EFD32E700413216 /* AFSecurityPolicy.m in Sources */,
 				EE75812A1EFD32E700413216 /* MKAnnotationView+WebCache.m in Sources */,
 				EE7581281EFD32E700413216 /* AFURLResponseSerialization.m in Sources */,
+				EE7581561EFFE41900413216 /* NSString+Path.m in Sources */,
 				EE7581321EFD32E700413216 /* SDWebImagePrefetcher.m in Sources */,
 				EE7581311EFD32E700413216 /* SDWebImageManager.m in Sources */,
 				EE7580DA1EFD2A3300413216 /* ViewController.m in Sources */,
@@ -360,20 +361,19 @@
 				EE7581301EFD32E700413216 /* SDWebImageDownloaderOperation.m in Sources */,
 				EE7581391EFD32E700413216 /* UIView+WebCacheOperation.m in Sources */,
 				EE75812F1EFD32E700413216 /* SDWebImageDownloader.m in Sources */,
+				EE7581541EFFE41900413216 /* DownOperation.m in Sources */,
 				EE7581341EFD32E700413216 /* UIImage+GIF.m in Sources */,
-				EE7581441EFFD62B00413216 /* NSString+Path.m in Sources */,
 				EE7581291EFD32E700413216 /* AFURLSessionManager.m in Sources */,
-				EE75814A1EFFDFF200413216 /* UIImageView+WebImage.m in Sources */,
+				EE7581551EFFE41900413216 /* HMWYWebImageManager.m in Sources */,
 				EE7580D41EFD2A3300413216 /* main.m in Sources */,
 				EE75813B1EFD32E700413216 /* YYClassInfo.m in Sources */,
 				EE7581251EFD32E700413216 /* AFNetworkReachabilityManager.m in Sources */,
 				EE7581371EFD32E700413216 /* UIImageView+HighlightedWebCache.m in Sources */,
-				EE7580EC1EFD2B5A00413216 /* DownOperation.m in Sources */,
 				EE75812C1EFD32E700413216 /* SDImageCache.m in Sources */,
 				EE7581331EFD32E700413216 /* UIButton+WebCache.m in Sources */,
 				EE75812B1EFD32E700413216 /* NSData+ImageContentType.m in Sources */,
+				EE7581571EFFE41900413216 /* UIImageView+WebImage.m in Sources */,
 				EE7581271EFD32E700413216 /* AFURLRequestSerialization.m in Sources */,
-				EE7581411EFD416500413216 /* HMWYWebImageManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
